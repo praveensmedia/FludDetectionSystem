@@ -1,4 +1,4 @@
-//code written for Arduino-UNO by praveen kumar
+//code written for Arduino-NANO by praveen kumar
 #include <LiquidCrystal.h> 
 #include <math.h>
 #define BUZ  10
