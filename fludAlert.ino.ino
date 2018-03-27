@@ -1,4 +1,4 @@
-//code written for Arduino-UNO
+//code written for Arduino-UNO by praveen kumar
 #include <LiquidCrystal.h> 
 #include <math.h>
 #define BUZ  10
@@ -6,7 +6,7 @@ const int trigPin = 9;                            //9th pins of Arduino connecte
 const int echoPin = 8;                            //8th pin of Arduino connected to echo pin of HC-SR04(receives pulse)           
 long duration, inches, cm;                        //these are the variables used in the code
 LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
-String str="WATER LEVEL: ";                      // creating string
+String str="WATER LEVEL: ";                       // creating string
 String CM,STRR,STR1,IND="FLUD DETECTED\n",LVL="WATER LEVEL=";
 void setup()
 {
