@@ -1,3 +1,4 @@
+//code written for Arduino-UNO
 #include <LiquidCrystal.h> 
 #include <math.h>
 #define BUZ  10
@@ -65,7 +66,7 @@ void SendMessage()                                    //sents a message
   delay(100);
   digitalWrite(BUZ, HIGH);                            //buzzer off
   lcd.clear();                                        //clears the display
-  lcd.print("  FLUD DETECTED");                         //prints on the screen
+  lcd.print("  FLUD DETECTED");                       //prints on the screen
   lcd.setCursor(0,1);
   lcd.print(" SENDING MESSAGE");
   delay(100);
@@ -76,7 +77,7 @@ void SendMessage()                                    //sents a message
   STRR=IND+STR1+"cm";
   Serial.println("AT+CMGF=1");                        //command to set GSM module in text mode 
   delay(1000);                                        //wait for a second
-  Serial.println("AT+CMGS=\"+917794065478\"\r");        //command to send message to that number
+  Serial.println("AT+CMGS=\"+91**********\"\r");      //command to send message to that number
   digitalWrite(BUZ, LOW);                             //buzzer active
   delay(500);
   Serial.println(STRR);                               //print the message contained string
@@ -91,11 +92,11 @@ void SendMessage()                                    //sents a message
   lcd.clear();                                
  
 }
-void gsm_init()                                           //this function calls to initialise the GSM module
+void gsm_init()                                       //this function calls to initialise the GSM module
 {
   lcd.clear();
   lcd.print("GSM initializing...." );
- boolean at_flag=1;                                       //flage for check network
+ boolean at_flag=1;                                   //flage for check network
  while(at_flag)
   {
    Serial.println("AT");
